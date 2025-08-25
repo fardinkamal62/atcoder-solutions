@@ -3,4 +3,13 @@ project(AtCoder)
 
 set(CMAKE_CXX_STANDARD 26)
 
-add_executable(AtCoder main.cpp)
+file(GLOB SOURCES
+        "main.cpp"
+)
+
+add_compile_options(
+        -O2 -Wno-unused-result -DONLINEJUDGE
+)
+
+# Add files here to execute
+add_executable(AtCoder ${SOURCES})
